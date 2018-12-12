@@ -1,0 +1,127 @@
+@import "variables";
+
+.transition-slide-in-horizontal {
+  &-enter {
+    transform: translate3d(100%, 0, 0);
+    z-index: 20;
+    box-shadow: 0 0 100px rgba(0,0,0,0.1);
+  }
+  &-enter-active{
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.4s $ease-out-cubic;
+  }
+  &-leave {
+    transform: translate3d(0, 0, 0);
+    z-index: 1;
+  }
+  &-leave-active{
+    transform: translate3d(-20%, 0, 0);
+    transition: transform 0.4s $ease-out-cubic;
+  }
+}
+
+.transition-slide-out-horizontal {
+  &-enter {
+    transform: translate3d(-20%, 0, 0);
+    z-index: 1;
+  }
+  &-enter-active{
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.4s $ease-out-cubic;
+  }
+  &-leave {
+    transform: translate3d(0, 0, 0);
+    box-shadow: 0 0 100px rgba(0,0,0,0.1);
+    z-index: 20;
+  }
+  &-leave-active{
+    transform: translate3d(100%, 0, 0);
+    transition: transform 0.4s $ease-out-cubic;
+  }
+}
+
+.transition-slide-in-vertical {
+  &-enter {
+    transform: translate3d(0, 100%, 0);
+    z-index: 20;
+    box-shadow: 0 0 100px rgba(0,0,0,0.1);
+  }
+  &-enter-active{
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.4s $ease-out-cubic;
+  }
+}
+
+.transition-slide-out-vertical {
+  &-enter{
+    z-index: 1;
+  }
+  &-leave {
+    transform: translate3d(0, 0, 0);
+    z-index: 20;
+    box-shadow: 0 0 100px rgba(0,0,0,0.1);
+  }
+  &-leave-active{
+    transform: translate3d(0, 100%, 0);
+    transition: transform 0.4s $ease-out-cubic;
+  }
+}
+
+.transition-crossfade {
+  &-enter {
+    z-index: 20;
+    opacity: 0;
+  }
+  &-enter-active{
+    opacity: 1;
+    transition: opacity 0.4s $ease-out-cubic;
+  }
+  &-leave {
+    opacity: 1;
+    z-index: 1;
+  }
+  &-leave-active{
+    opacity: 0;
+    transition: opacity 0.4s $ease-out-cubic;
+  }
+}
+
+.transition-pop {
+  &-enter {
+    z-index: 20;
+    transform: scale(0);
+  }
+  &-enter-active{
+    transform: scale(1);
+    transition: transform 0.4s $ease-out-back;
+  }
+  &-leave {
+    transform: scale(1);
+    z-index: 1;
+  }
+  &-leave-active{
+    transform: scale(0);
+    transition: transform 0.2s $ease-out-cubic;
+  }
+}
+
+.transition-fade-up {
+  &-enter {
+    opacity: 0;
+    transform: translate3d(0, 80px, 0);
+  }
+  &-enter-active{
+    opacity: 1;
+    transform: translateY(0px);
+    transition: transform 0.4s $ease-out-cubic, opacity 0.2s linear;
+  }
+  &-leave {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  &-leave-active{
+    opacity: 0;
+    transform: translateY(80px);
+    transition: transform 0.2s $ease-out-cubic, opacity 0.2s linear;
+  }
+}

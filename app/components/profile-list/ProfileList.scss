@@ -1,0 +1,9 @@
+@import "variables";
+@import "functions";
+
+.profile-list {
+  background-color: $brand-dark-grey;
+  > div {
+    border-bottom: 1px solid #4E4E52;
+  }
+}

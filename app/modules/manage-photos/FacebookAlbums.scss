@@ -1,0 +1,11 @@
+@import "variables";
+
+.facebook-albums-screen {
+  background-color: #fff;
+  &__title {
+    background-color: $color-facebook;
+  }
+  &__button {
+    margin: 10px auto;
+  }
+}

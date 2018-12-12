@@ -1,0 +1,19 @@
+@import "variables";
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  svg {
+    height: 14px;
+    flex: 0 0 auto;
+  }
+  &--button {
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #fff;
+    svg {
+      fill: $brand-dark-grey;
+    }
+  }
+}

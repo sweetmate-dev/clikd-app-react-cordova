@@ -1,0 +1,51 @@
+@import "variables";
+
+.test-result-content {
+  .platform-ios & {
+    padding-top: 20px + $ios-header-offset;
+  }
+  padding: 20px;
+  justify-content: space-between;
+  h1 {
+    margin-bottom: 30px;
+  }
+  &__result {
+    text-align: center;
+  }
+  &__venn {
+    overflow: hidden;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  &__matchInfo {
+    font-size: $font-size-xl;
+  }
+  &__circle {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    &--left {
+      clear: left;
+      z-index: 2;
+    }
+    &--right {
+      z-index: 3;
+      margin-left: -30px;
+    }
+  }
+  &__wrapper {
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 350px) {
+  .test-result-content {
+    &__circle {
+      width: 170px;
+      height: 170px;
+    }
+  }
+}

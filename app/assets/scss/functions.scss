@@ -1,0 +1,10 @@
+@import "variables";
+
+@function grey($percentage){
+  @return mix(#fff, $brand-dark-grey, $percentage);
+}
+
+@function ease-out-back($strength: 1){
+  $a: 1.650 * $strength;
+  @return cubic-bezier(0.245, $a, 0.520, $a);
+}

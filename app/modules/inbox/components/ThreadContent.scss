@@ -1,0 +1,18 @@
+.thread-content {
+  &__inbox-wrapper {
+    flex-grow: 1;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column-reverse;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  &__inbox {
+    /* Chrome bug where padding on the parent element isn't part of the scroll height */
+    padding: 10px 0px; 
+    flex-shrink: 0;
+  }
+  &__inbox-box {
+    flex-shrink: 0;
+  }
+}

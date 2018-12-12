@@ -1,0 +1,23 @@
+@import "variables";
+@import "functions";
+
+.registration-footer {
+  padding: 10px;
+  p {
+    text-align: right;
+    font-size: $font-size-xs;
+    color: grey(40%);
+    margin-bottom: 10px;
+  }
+  &__bar {
+    display: block;
+    height: 5px;
+    background-color: grey(10%);
+  }
+  &__fill {
+    height: 100%;
+    display: block;
+    background-color: grey(30%);
+    transition: width 0.3s ease-out;
+  }
+}

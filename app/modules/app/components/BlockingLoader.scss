@@ -1,0 +1,65 @@
+@import "functions";
+@import "variables";
+
+.blocking-loader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 100;
+  &__icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    position: absolute;
+    margin-left: -45px;
+    margin-top: -45px;
+    width: 90px;
+    height: 90px;
+    svg {
+      min-height: 30px;
+      circle {
+        stroke: grey(30%);
+      }
+    }
+  }
+  &.animate {
+    &-enter{
+      background-color: rgba(0,0,0,0);
+      .blocking-loader__icon {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+    }
+    &-enter-active{
+      background-color: rgba(0,0,0,0.4);
+      transition: background-color 0.2s linear;
+      .blocking-loader__icon {
+        opacity: 1;
+        transform: translateY(0px);
+        transition: transform 0.3s $ease-out-cubic, opacity 0.1s linear;
+      }
+    }
+    &-leave {
+      background-color: rgba(0,0,0,0.4);
+      .blocking-loader__icon {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+    }
+    &-leave-active {
+      background-color: rgba(0,0,0,0);
+      transition: background-color 0.2s linear;
+      .blocking-loader__icon {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.2s $ease-out-cubic;
+      }
+    }
+  }
+}

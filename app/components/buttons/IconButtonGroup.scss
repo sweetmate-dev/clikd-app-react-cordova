@@ -1,0 +1,13 @@
+@import "functions";
+
+.icon-button-group {
+  display: flex;
+  &__item {
+    width: 50%;
+    flex-grow: 1;
+    border-left: solid 1px grey(30%);
+    &:first-child {
+      border-left: 0;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@import "variables";
+
+.inbox-content {
+  .film-strip {
+    flex-shrink: 0;
+    box-sizing: content-box;
+  }
+  &__list {
+    flex-grow: 1;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  &__list-item {
+    margin-bottom: 1px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

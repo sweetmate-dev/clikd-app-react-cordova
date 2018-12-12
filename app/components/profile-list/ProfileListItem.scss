@@ -1,0 +1,12 @@
+@import "variables";
+
+.profile-list-item {
+  display: flex;
+  padding: 12px 10px;
+  background-color: #212226;
+  align-items: center;
+  transition: transform 0.3s $ease-out-cubic;
+  &--isPanning {
+    transition: none;
+  }
+}

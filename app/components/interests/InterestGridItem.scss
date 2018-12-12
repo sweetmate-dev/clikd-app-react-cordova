@@ -1,0 +1,62 @@
+@import "variables";
+@import "functions";
+
+.interest-grid-item {
+  width: 33.33%;
+  float: left;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  transition: filter 0.2s ease-out;
+  overflow: hidden;
+  &:before {
+    display: block;
+    content: '';
+    width: 100%;
+    padding-top: 100%;
+    border: solid 3px #fff;
+    z-index: 2;
+    position: relative;
+    opacity: 0;
+    transition: opacity 0.1s linear;
+  }
+  &__label {
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-image: linear-gradient(rgba(#000, 0), rgba(#000, 1));
+    padding: 30px 10px 10px 10px;
+    line-height: 1.3em;
+  }
+  &__icon {
+    position: absolute;
+    border-style: solid;
+    border-width: 0 40px 40px 0;
+    border-color: transparent #fff transparent transparent;
+    top: 0px;
+    right: 0px;
+    opacity: 0;
+    transition: all 0.2s ease-out;
+    transform: translate(30px, -30px);
+    svg {
+      fill: grey(30%);
+      height: 10px;
+      position: absolute;
+      left: 22px;
+      top: 8px;
+    }
+  }
+  &--selected {
+    transition: filter 0.4s ease-out;
+    &:before, {
+      opacity: 1;
+      transition: opacity 0.2s ease-out;
+    }
+    .interest-grid-item__icon {
+      opacity: 1;
+      transform: translate(0, 0);
+
+    }
+  }
+}

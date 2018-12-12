@@ -1,0 +1,22 @@
+@import "variables";
+
+.draggable-grid-delete-icon{
+    position: absolute;
+    right: -10px;
+    top: -15px;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    z-index: 2;
+    &__icon {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #fff;
+      svg {
+        fill: $brand-dark-grey;
+        width: 8px;
+        height: 8px;
+      }
+    }
+  }

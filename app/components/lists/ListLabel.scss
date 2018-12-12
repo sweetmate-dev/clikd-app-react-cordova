@@ -1,0 +1,15 @@
+@import "functions";
+
+.list-label {
+  flex-grow: 1;
+  padding: 15px 10px;
+  display: flex;
+  &__label {
+    flex-grow: 1;
+    color: grey(40%);
+  }
+  &__subtext {
+    align-self: flex-end;
+    color: grey(40%);
+  }
+}

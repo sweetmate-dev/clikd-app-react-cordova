@@ -1,0 +1,36 @@
+@import "variables";
+@import "functions";
+
+.manage-test-categories-content {
+  padding: 12px 12px 0 12px;
+  &__grid {
+    display: flex;
+    padding-bottom: 12px;
+  }
+  &__col {
+    flex-grow: 1;
+    width: 50%;
+    &:last-child {
+      margin-left: 10px;
+      .manage-test-categories-content__question:first-child {
+        height: 250px;
+      }
+    }
+  }
+  &__question {
+    margin-bottom: 10px;
+    height: 280px;
+    border: solid 1px #fff;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .submitQuestion {
+    text-align: center;
+    padding: 0 20px 10px 20px;
+    font-size: $font-size-l;
+    color: grey(40%);
+    display: block;
+  }
+}

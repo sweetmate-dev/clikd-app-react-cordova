@@ -1,0 +1,36 @@
+@import "variables";
+@import "functions";
+
+.list-row {
+  display: flex;
+  justify-content: center;
+  &--stacked {
+    flex-direction: column;
+    .list-content {
+      padding-top: 0;
+      text-align: left;
+    }
+  }
+  &--theme-white {
+    background-color: #fff;
+    border-bottom: solid 1px grey(90%);
+    .list-label__label, .list-button__button {
+      color: $brand-dark-grey;
+    }
+  }
+  &--theme-dark-block {
+    background-color: $brand-med-grey;
+    margin-bottom: 1px;
+  }
+  &--theme-med-block {
+    background-color: grey(20%);
+    margin-bottom: 1px;
+    .list-label__label, .list-button__button {
+      color: #fff;
+    }
+  }
+
+  &--theme-dark {
+    border-bottom: solid 1px $brand-dark-grey;
+  }
+}

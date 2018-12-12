@@ -1,0 +1,16 @@
+module.exports = {
+  API_ROOT: 'https://api.clikdapp.com',
+  INSTAGRAM_CLIENT_ID: '002a5451bc1d46d195e73aaee4d70b36',
+  INSTAGRAM_REDIRECT_URI: 'https://api.clikdapp.com/instagram_success.html',
+  FIREBASE_SENDER_ID: '1:58335905653:android:89b0428fb4636709',
+  ANDROID_SENDER_ID: '58335905653',
+  TESTFAIRY_APP_TOKEN: 'cef2c3717e910a3ea4bf3811476e803996344f6e',
+  FB_APP_ID: '259878857740265',
+  FB_APP_NAME: 'Clikd Dating',
+  CHAT_SERVER: 'chat.clikdapp.com',
+  CHAT_WS_URL: 'wss://chat.clikdapp.com:5280/websocket',
+  BRANCH_IO_KEY: 'key_live_jeBPjrksFKIT0x4lA2IxeoclFzoog4dT',
+  BRANCH_IO_LINK_DOMAIN: 'clikd.app.link',
+  BRANCH_IO_TEST_LINK_DOMAIN: 'clikd.test-app.link',
+  BRANCH_IO_TEST_MODE: false,
+}

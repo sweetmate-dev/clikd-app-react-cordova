@@ -1,0 +1,17 @@
+@import "variables";
+
+.test-question {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  &__answer {
+    flex-grow: 1;
+  }
+  &__question {
+    flex-shrink: 0;
+    text-align: center;
+    padding: 15px 10px;
+    background-color: #fff;
+    color: $brand-dark-grey;
+  }
+}

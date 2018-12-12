@@ -1,0 +1,9 @@
+@import "variables";
+
+.carousel { 
+  overflow: hidden;
+  &__inner {
+    width: 100%;
+    height: 100%;
+  }
+}

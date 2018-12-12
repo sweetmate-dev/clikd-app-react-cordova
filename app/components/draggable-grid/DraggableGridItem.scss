@@ -1,0 +1,11 @@
+@import "variables";
+
+.draggable-grid-item {
+  position: absolute;
+  transition: all 0.4s $ease-out-cubic;
+  z-index: 1;
+  &--isPanning {
+    transition: none;
+    z-index: 2;
+  }
+}

@@ -1,0 +1,15 @@
+@import "variables";
+@import "functions";
+
+.manage-photos-screen {
+  background-color: $brand-dark-grey;
+  p {
+    text-align: center;
+    margin: 5px 10px 15px 10px;
+    color: grey(40%);
+  }
+  &__content {
+    padding: 10px;
+    background-color: $brand-med-grey;
+  }
+}

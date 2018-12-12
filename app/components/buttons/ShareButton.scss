@@ -1,0 +1,19 @@
+@import "variables";
+
+.share-button {
+  display: block;
+  &__label {
+    font-size: $font-size-s;
+  }
+
+  &--facebook {
+    background-color: $color-facebook;
+  }
+  &--twitter {
+    background-color: $color-twitter;
+  }
+  &--whatsapp {
+    background-color: $color-whatsapp;
+  }
+  
+}

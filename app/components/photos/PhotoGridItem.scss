@@ -1,0 +1,10 @@
+.photo-grid-item {
+  float: left;
+  width: 33.33%;
+  &:before {
+    display: block;
+    content: '';
+    width: 100%;
+    padding-top: 100%;
+  }
+}

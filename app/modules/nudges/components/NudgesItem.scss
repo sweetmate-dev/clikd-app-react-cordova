@@ -1,0 +1,9 @@
+@import "variables";
+@import "functions";
+
+.nudges-item {
+  &__nudge-date {
+    margin-top: 4px;
+    color: grey(40%);
+  }
+}

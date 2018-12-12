@@ -1,0 +1,51 @@
+@import "variables";
+@import "functions";
+
+.inbox-list-item {
+  &__menu-icon {
+    height: 100%;
+    width: 70px;
+    padding-left: 40px;
+    position: absolute;
+    right: 100%;
+    top: 0;
+    background-color: $brand-med-grey;
+    svg {
+      fill: #fff;
+      height: 16px;
+    }
+  }
+  &__meta {
+    display: flex;
+    margin-bottom: 4px;
+    align-items: baseline;
+  }
+  &__name {
+    flex-grow: 1;
+    color: grey(90%);
+    margin-right: 10px;
+  }
+  &__date {
+    font-size: $font-size-m;
+    color: grey(30%);
+  }
+  &__latest-message {
+    width: 75%;
+    color: grey(30%);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  &__badge {
+    margin-left: 60px;
+    margin-top: -25px;
+  }
+  &--unread {
+    border-left: 6px solid $brand-turquoise;
+    background-color: #2E2F33;
+    border-bottom-color: #58595C !important;
+    .inbox-list-item__menu-icon {
+      margin-right: 6px;
+    }
+  }
+}

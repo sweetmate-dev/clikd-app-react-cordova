@@ -1,0 +1,29 @@
+@import "variables";
+@import "functions";
+
+.manage-test-film-strip {
+  height: 139px;
+  .carousel {
+    position: relative;
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      top: 45px;
+      bottom: 0;
+      width: 18px;
+      height: 18px;
+      border-top: 2px solid white;
+      border-right: 2px solid white;
+      pointer-events: none;
+      z-index: 1;
+    }
+    &:before {
+      left: 10px;
+      transform: rotate(-135deg);
+    }
+    &:after {
+      right: 10px;
+      transform: rotate(45deg);
+    }
+  }
+}

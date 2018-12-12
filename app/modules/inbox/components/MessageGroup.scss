@@ -1,0 +1,17 @@
+@import "variables";
+@import "functions";
+
+.message-group {
+  &__title {
+    text-align: center;
+    color: grey(60%);
+    font-size: $font-size-s;
+    margin-bottom: 20px;
+  }
+  &__message {
+    margin-bottom: 5px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

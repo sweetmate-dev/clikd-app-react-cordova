@@ -1,0 +1,40 @@
+// brand colours
+$brand-red: #ff4f51;
+$brand-white: #fff;
+$brand-green: #54d689;
+$brand-lighter-grey: #d4d5d9;
+$brand-light-grey: #68696d;
+$brand-dark-grey: #25282d;
+$brand-med-grey: #2f3237;
+$brand-darkest-grey: #282828;
+$brand-turquoise: #00D9C9;
+
+$color-facebook: #3B5998;
+$color-twitter: #4099FF;
+$color-whatsapp: #25d366;
+
+// font sizes
+$font-size-xxl: 22px;
+$font-size-xl: 18px;
+$font-size-l: 16px;
+$font-size-m: 14px;
+$font-size-ms: 13px;
+$font-size-s: 12px;
+$font-size-xs: 10px;
+
+// font families
+$font-monda: 'Monda';
+$font-typewriter: 'Tox Typewriter';
+
+// easing
+$ease-out-cubic: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+$ease-out-back: cubic-bezier(0.000, 0.985, 0.455, 1.650);
+
+// constants
+$ios-header-offset: 20px;
+$button-width: 80%;
+$title-bar-height: 44px;
+
+// break point for small screen sizes
+$media-small: 320px;
+$media-medium: 380px; // iphone 6 is 375px

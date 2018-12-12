@@ -1,0 +1,79 @@
+@import "variables";
+@import "functions";
+
+.title-bar {
+  display: flex;
+  padding: 10px 0;
+  position: relative;
+  min-height: $title-bar-height;
+  &--fixed {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 20;
+  }
+  &--border {
+    border-bottom: solid 1px grey(10%);
+  }
+  &--fade {
+    background-image: linear-gradient(rgba($brand-dark-grey, 1), rgba($brand-dark-grey, 0));
+  }
+  &__action-button {
+    height: $title-bar-height;
+    min-width: 44px;
+    padding: 10px;
+    line-height: $title-bar-height - 20px;
+    position: absolute;
+    top: 0;
+    transition: opacity 0.3s linear;
+    &--disabled {
+      opacity: 0.5;
+    }
+    &--left {
+      left: 0;
+      text-align: left;
+      justify-content: flex-start;
+    }
+    &--right {
+      right: 0;
+      text-align: right;
+      justify-content: flex-end;
+    }
+    .icon {
+      height: 100%;
+    }
+    svg {
+      height: 20px;
+    }
+  }
+  &__title {
+    flex-grow: 1;
+    text-align: center;
+    line-height: $title-bar-height - 20px;
+    &__logo {
+      svg {
+        min-height: 40px;
+      }
+    }
+  }
+  
+  /* iOS specific styles */
+  .platform-ios & {
+    padding-top: 10px + $ios-header-offset;
+    min-height: $title-bar-height + $ios-header-offset;
+    &__action-button {
+      top: $ios-header-offset;
+    }
+    &--fixed {
+      margin-top: $ios-header-offset;
+      padding-top: 0px;
+      .title-bar__action-button {
+        top: 0px;
+      }
+      + div.content {
+        margin-top: $ios-header-offset;
+      }
+    }
+  }
+}

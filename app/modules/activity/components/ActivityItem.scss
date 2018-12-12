@@ -1,0 +1,44 @@
+@import "variables";
+@import "functions";
+
+.activity-item {
+  border-bottom: 1px solid #4E4E52;
+  &:first-child {
+    border-top: 1px solid #4D4E51;
+  }
+  display: block;
+  &__item {
+    padding-right: 0;
+    &--unread {
+      border-left: 6px solid $brand-turquoise;
+      background-color: #2E2F33;
+      border-bottom-color: #58595C;
+    }
+  }
+  &__name, &__status {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  &__status {
+    margin-top: 4px;
+    color: grey(40%);
+  }
+  &__icon-wrapper {
+    display: block;
+    padding: 10px 5px 10px 10px;
+    height: 40px;
+  }
+  &__icon {
+    width: 40px;
+    svg {
+      height: 22px;
+      fill: #fff;
+    }
+    &--disabled {
+      svg {
+        fill: grey(20%);
+      }
+    }
+  }
+}

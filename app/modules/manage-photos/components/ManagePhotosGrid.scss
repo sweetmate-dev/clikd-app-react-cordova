@@ -1,0 +1,26 @@
+@import "variables";
+
+.manage-photos-grid {
+  margin: 0 -4px;
+  position: relative;
+  &__block {
+    float: left;
+    display: inline-block;
+    background-color: #fff;
+    width: calc(33.33% - 8px);
+    margin: 4px;
+    background-color: $brand-dark-grey;
+    &:first-child {
+      width: calc(66.66% - 8px);
+    }
+    &:nth-child(4){
+      clear: left;
+    }
+    &:before {
+      content: '';
+      width: 100%;
+      padding-top: 100%;
+      display: block;
+    }
+  }
+}

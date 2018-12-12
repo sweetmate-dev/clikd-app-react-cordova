@@ -1,0 +1,10 @@
+@import "variables";
+
+.interactions-screen {
+  background-color: $brand-dark-grey;
+  .tabs {
+    .badge {
+      margin-left: 5px;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.carousel-track {
+  position: relative;
+  white-space: nowrap;
+  width: 100%;
+  height: 100%;
+  &__clones {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    &--before {
+      right: 100%;
+    }
+    &--after {
+      left: 100%;
+    }
+  }
+}

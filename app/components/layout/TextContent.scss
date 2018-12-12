@@ -1,0 +1,34 @@
+.text-content {
+  padding: 10px;
+  h2, h3, h4 {
+    font-weight: bold;
+    margin-bottom: 1em;
+  }
+  p {
+    margin-bottom: 1em;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  ol, ul {
+    padding-left: 1em;
+    margin: 1em 0;
+    > li {
+      margin-bottom: 0.5em;
+      list-style-position: inside;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  ol {
+    > li {
+      list-style-type: lower-roman;
+    }
+  }
+  ul {
+    > li {
+      list-style-type: disc;
+    }
+  }
+}

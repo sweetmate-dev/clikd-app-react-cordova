@@ -1,0 +1,37 @@
+@import "variables";
+
+.test-question-answer {
+  position: relative;
+  &__image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__icon {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: $brand-red;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    margin-top: -20px;
+    margin-left: -20px;
+    z-index: 3;
+    svg {
+      fill: #fff;
+    }
+    &.re-animate {
+      animation: 0.4s 1 pulse;
+    }
+  }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.5); }
+  100% { transform: scale(1); }
+}

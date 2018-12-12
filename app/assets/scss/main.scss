@@ -1,0 +1,79 @@
+@import "variables";
+@import "fonts";
+@import "slick";
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+*:not(input):not(textarea) {
+    -webkit-user-select: none; /* disable selection/Copy of UIWebView */
+    -webkit-touch-callout: none; /* disable the IOS popup when long-press on a link */
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+html, body {
+    height: 100%;
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    font-family: $font-monda;
+    font-size: $font-size-m;
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+    background-color: $brand-med-grey;
+}
+
+p {
+    font-size: $font-size-l;
+    margin: 0;
+    line-height: 1.25;
+}
+
+h1, h2, h3, h4 {
+    line-height: 1.25;
+    margin: 0;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: $font-size-xxl;
+}
+
+h2 {
+    font-size: $font-size-xl;
+}
+
+ul, li {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+textarea, input {
+    font: inherit;
+    -webkit-font-smoothing: inherit;
+    font-size: $font-size-m;
+    color: $brand-dark-grey;
+}
+
+.information-icon {
+    display: inline-block;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    font-size: $font-size-ms;
+    color: #fff;
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    padding-right: 1px;
+    text-align: center;
+}

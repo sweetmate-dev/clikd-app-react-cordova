@@ -1,0 +1,29 @@
+@import "variables";
+@import "functions";
+
+.icon-button {
+  text-align: center;
+  display: inline-block;
+  &__label {
+    font-size: $font-size-ms;
+    color: grey(40%);
+  }
+  &__icon {
+    margin-bottom: 4px;
+    svg {
+      height: 30px;
+      fill: #fff;
+    }
+    &--solid {
+      width: 40px;
+      height: 40px;
+      background-color: #fff;
+      border-radius: 50%;
+      svg {
+        height: 20px;
+        fill: $brand-med-grey;
+      }
+    }
+  }
+ 
+}

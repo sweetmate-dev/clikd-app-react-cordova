@@ -1,0 +1,14 @@
+.textarea-row{
+  textarea {
+    display: block;
+    width: 100%;
+    border: 0;
+    padding: 15px 10px;
+    resize: none;
+    display: block;
+    min-height: 80px;
+  }
+  &--large textarea {
+    min-height: 100px;
+  }
+}

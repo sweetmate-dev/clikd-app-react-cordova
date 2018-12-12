@@ -1,0 +1,25 @@
+@import "variables";
+@import "functions";
+
+.profile-info {
+  width: 100%;
+  padding: 0 10px;
+  &__row {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: baseline;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__label {
+    white-space: nowrap;
+    font-size: $font-size-m;
+    color: grey(40%);
+    width: 100px;
+    flex-shrink: 0;
+  }
+  &__value {
+    flex-grow: 1;
+  }
+}

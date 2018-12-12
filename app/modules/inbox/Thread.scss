@@ -1,0 +1,31 @@
+@import "functions";
+
+.thread-screen {
+  h2 {
+    display: inline-flex;
+    line-height: 30px;
+  }
+  .title-bar {
+    padding: 7px 0 0 0;
+    /* iOS specific styles */
+    .platform-ios & {
+      padding-top: 5px + $ios-header-offset;
+      min-height: $title-bar-height + $ios-header-offset;
+    }
+  }
+  &__content {
+    background-color: grey(90%);
+    flex-shrink: 0;
+    &.error {
+      background-color: transparent;
+    }
+  }
+  &__title-image {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-flex;
+  }
+}

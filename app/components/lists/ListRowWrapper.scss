@@ -1,0 +1,11 @@
+.list-row-wrapper{
+  display: flex;
+  .list-row {
+    flex-grow: 1;
+    width: 50%;
+    margin-right: 1px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

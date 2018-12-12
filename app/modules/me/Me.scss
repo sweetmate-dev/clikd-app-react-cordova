@@ -1,0 +1,48 @@
+@import "variables";
+
+.me-screen {
+  background-color: $brand-med-grey;
+  &__image-wrapper {
+    position: relative;
+    margin-bottom: 40px;
+    padding-bottom: 50px;
+    overflow-y: hidden;
+  }
+  .profile-image-carousel {
+    padding-bottom: 17px;
+  }
+  &__image {
+    margin: 0 auto 80px auto;
+    width: 100%;
+    overflow: hidden;
+    &:before {
+      content: '';
+      display: block;
+      width: 100%;
+      padding-top: 100%;
+    }
+  }
+  &__camera-button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 33%;
+    z-index: 3;
+    .icon-button__icon {
+      width: 50px;
+      height: 50px;
+      background-color: $brand-med-grey;
+      svg {
+        fill: $brand-white;
+      }
+    }
+    .icon-button__icon--solid {
+
+    }
+  }
+  .platform-ios & {
+    &__content {
+      padding-top: $ios-header-offset;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+.button-list {
+  .button {
+    margin-top: 5px;
+    &:first-child, &--color-transparent {
+      margin-top: 0;
+    }
+  }
+}

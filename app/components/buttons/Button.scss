@@ -1,0 +1,44 @@
+@import "variables";
+@import "functions";
+
+.button {
+	display: block;
+	font-size: $font-size-m;
+	padding: 15px;
+	line-height: 20px;
+  min-height: 50px;
+	color: #fff;
+  text-align: center;
+  background-color: $brand-dark-grey;
+  transition: background-color 0.2s linear, color 0.2s linear;
+  position: relative;
+  width: $button-width;
+  margin-left: auto;
+  margin-right: auto;
+	&--color-facebook {
+		background-color: $color-facebook;
+	}
+  &--color-red {
+    background-color: $brand-red;
+  }
+  &--color-med {
+    background-color: $brand-med-grey;
+  }
+  &--color-white {
+    background-color: #fff;
+    color: $brand-dark-grey;
+  }
+  &--color-transparent {
+    background-color: transparent;
+    color: $brand-darkest-grey;
+  }
+  &--disabled {
+    color: grey(50%);
+  }
+  &--full-width {
+    width: 100%;
+  }
+  &--disabled, &--loading {
+    pointer-events: none;
+  }
+}

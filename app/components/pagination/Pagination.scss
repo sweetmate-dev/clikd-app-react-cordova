@@ -1,0 +1,28 @@
+@import "functions";
+@import "variables";
+
+.pagination {
+  height: 8px;
+  text-align: center;
+  &__dot {
+    display: inline-block;
+    vertical-align: top;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: grey(30%);
+    margin: 0 4px;
+    transition: background-color 0.2s linear;
+    &--active {
+      background-color: $brand-red;
+    }
+  }
+  &--light {
+    .pagination__dot {
+      background-color: rgba(#fff, 0.5);
+      &--active {
+        background-color: #fff;
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["airbnb", "plugin:jsx-control-statements/recommended"],
+  "globals": {
+    "window": true,
+    "document": true,
+    "navigator": true,
+    "cordova": true,
+    "plugins": true,
+  },
+  "plugins": [
+    "jsx-control-statements"
+  ],
+  "rules": {
+    "react/jsx-filename-extension": "off",
+    "react/forbid-prop-types": "off",
+    "import/no-unresolved": "off",
+    "import/extensions": "off",
+    "no-plusplus": "off",
+    "default-case": "off",
+    "no-mixed-operators": "off",
+    "react/sort-comp": [0, {}]
+  }
+}

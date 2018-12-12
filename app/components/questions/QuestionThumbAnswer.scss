@@ -1,0 +1,21 @@
+@import "variables";
+
+.question-thumb-answer {
+  position: relative;
+  &__icon {
+    width: 30px;
+    height: 30px;
+    background-color: $brand-red;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -15px;
+    margin-top: -15px;
+    z-index: 1;
+    border-radius: 50%;
+    svg {
+      height: 12px;
+      fill: #fff;
+    }
+  }
+}

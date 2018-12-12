@@ -1,0 +1,53 @@
+@import "variables";
+@import "functions";
+@import "animations";
+
+.profile-content {
+  &__carousel {
+    margin-bottom: 20px;
+  }
+  &__inner {
+    padding-bottom: 85px;
+    flex-grow: 1;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  &__header {
+    display: flex;
+    padding: 12px 10px 10px 10px;
+    margin-bottom: 15px;
+    border-bottom: solid 1px grey(10%);
+    .icon {
+      margin-top: 7px;
+      svg {
+        height: 30px;
+      }
+    }
+  }
+  &__header.noTagLine {
+    padding-bottom: 3px;
+  }
+  &__meta {
+    flex-grow: 1;
+  }
+  &__tagline {
+    display: block;
+    margin-top: 2px;
+    color: grey(40%);
+    font-size: $font-size-m;
+  }
+  &__stretch {
+    flex-grow: 1;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+.noTagLine {
+  h3 {
+    line-height: 30px;
+  }
+  .icon {
+    margin-top: 0;
+  }
+}

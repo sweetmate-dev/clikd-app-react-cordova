@@ -1,0 +1,18 @@
+@import "variables";
+
+.content {
+	width: 100%;
+	overflow: hidden;
+	overflow-y: scroll;
+	flex: 1;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  &--flex {
+    display: flex;
+    flex-direction: column;
+  }
+  &--white {
+    background-color: #fff;
+    color: $brand-dark-grey;
+  }
+}

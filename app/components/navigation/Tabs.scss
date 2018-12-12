@@ -1,0 +1,20 @@
+@import "variables";
+@import "functions";
+
+.tabs {
+  display: flex;
+  position: relative;
+  &__indicator {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: left 0.3s $ease-out-cubic;
+  }
+  /* iOS specific styles */
+  .platform-ios & {
+    padding-top: $ios-header-offset;
+    min-height: $title-bar-height + $ios-header-offset;
+  }
+}

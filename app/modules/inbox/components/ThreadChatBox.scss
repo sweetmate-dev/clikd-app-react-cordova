@@ -1,0 +1,30 @@
+@import "functions";
+@import "variables";
+
+.thread-chat-box {
+  border-top: solid 1px grey(80%);
+  background-color: grey(95%);
+  padding: 5px;
+  display: flex;
+  &__textarea {
+    flex-grow: 1;
+    padding: 5px;
+    background-color: #fff;
+    border: solid 1px grey(80%);
+    color: $brand-dark-grey;
+    margin-right: 10px;
+    max-height: 80px;
+  }
+  &__button {
+    padding: 5px;
+    margin-right: 5px;
+    flex-shrink: 0;
+    color: grey(30%);
+    display: flex;
+    align-items: center;
+    transition: color 0.2s linear;
+    &--disabled {
+      color: grey(70%);
+    }
+  }
+}

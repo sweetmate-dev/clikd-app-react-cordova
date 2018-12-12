@@ -1,0 +1,23 @@
+@import "functions";
+
+.loader {
+  &--centered {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  svg {
+    stroke: #fff;
+  }
+  &--size-large {
+    svg {
+      height: 30px;
+    }
+  }
+  &--color-grey {
+    svg {
+      stroke: grey(40%);
+    }
+  }
+}

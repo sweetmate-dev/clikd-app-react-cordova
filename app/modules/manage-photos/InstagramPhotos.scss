@@ -1,0 +1,11 @@
+@import "variables";
+
+.instagram-photos-screen {
+  background-color: #fff;
+  &__title {
+    background-color: $brand-med-grey;
+  }
+  &__button-wrapper {
+    padding: 10px;
+  }
+}

@@ -1,0 +1,13 @@
+@import "variables";
+
+.film-strip {
+  background-image: url("~@assets/images/film-strip-bg.png"), url("~@assets/images/film-strip-bg.png");
+  background-position: center top, center bottom;
+  background-repeat: repeat-x;
+  background-size: 15px 15px;
+  background-color: #212121;
+  padding: 15px 2px;
+  &__item {
+    padding: 0 2px;
+  }
+}

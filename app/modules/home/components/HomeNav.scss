@@ -1,0 +1,16 @@
+@import "functions";
+@import "variables";
+
+.home-nav {
+  display: flex;
+  padding: 0 20px;
+  justify-content: space-between;
+  background-color: $brand-med-grey;
+  .badge {
+    margin-left: -20px;
+    margin-top: 5px;
+  }
+  .platform-ios & {
+    padding-top: 3px;
+  }
+}

@@ -1,0 +1,29 @@
+@import "functions";
+
+.manage-test-screen {
+  &__intro {
+    text-align: center;
+    margin: 15px 10px 0px 10px;
+    color: grey(40%);
+  }
+  &__content {
+    padding: 10px;
+  }
+  &__button-wrapper {
+    width: 100%;
+    padding: 5px 0 20px 0;
+    background: linear-gradient(rgba($brand-med-grey, 0) 0, rgba($brand-med-grey, 100%) 80%, rgba($brand-med-grey, 1) 100%);
+  }
+  &__hints {
+    font-size: $font-size-ms;
+    margin: auto;
+    padding-top: 10px;
+    text-align: center;
+    color: grey(40%);
+    .information-icon {
+      margin-right: 7px;
+      color: grey(40%);
+      border-color: grey(40%);
+    }
+  }
+}

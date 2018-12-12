@@ -1,0 +1,24 @@
+@import "functions";
+@import "variables";
+
+.facebook-albums-list-row {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: solid 1px grey(90%);
+  color: $brand-dark-grey;
+  &__image {
+    width: 40px;
+    height: 40px;
+  }
+  &__label {
+    flex-grow: 1;
+    padding: 0 10px;
+  }
+  &__count {
+    font-size: $font-size-s;
+  }
+  &__icon svg {
+    fill: grey(40%);
+  }
+}

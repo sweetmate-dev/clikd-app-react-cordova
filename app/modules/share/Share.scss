@@ -1,0 +1,11 @@
+@import "functions";
+@import "variables";
+
+.share-screen {
+  &__copy {
+    text-align: center;
+    color: grey(40%);
+    padding: 10px 20px;
+    margin-bottom: 10px;
+  }
+}

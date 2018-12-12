@@ -1,0 +1,79 @@
+@import "variables";
+@import "functions";
+
+.auth-login {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background: transparent url("~@assets/images/Background@2x.png") repeat top left;
+  background-size: 100%;
+  
+  /* iOS Specific styles */
+  .platform-ios & {
+    .auth-logo {
+      top: 25px + $ios-header-offset;
+    }
+  }
+  .auth-logo {
+    height: 50px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 25px;
+  }
+
+  &__footer {
+    position: absolute;
+    bottom: 35px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    @media screen and (max-width: $media-small) {
+      bottom: 25px;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    .facebook-info {
+      padding: 15px 0px;
+      margin-top: 10px;
+      font-size: $font-size-s;
+      color: $brand-white;
+      @media screen and (max-width: $media-medium) {
+        padding-top: 10px;
+      }
+    }
+  }
+  
+  &__terms {
+    width: 240px;
+    margin: auto;
+    padding-bottom: 15px;
+    font-size: $font-size-ms;
+    color: $brand-white;
+    margin-bottom: 10px;
+    @media screen and (max-width: $media-medium) {
+      padding-bottom: 10px;
+    }
+    a { 
+      color: $brand-white;
+    }
+  }
+
+  &__carousel {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  &__pagination {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    .pagination__dot--active {
+      background-color: $brand-white;
+    }
+  }
+}

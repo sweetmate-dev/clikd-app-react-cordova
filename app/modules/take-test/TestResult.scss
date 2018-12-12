@@ -1,0 +1,47 @@
+@import "variables";
+
+.take-test-result-screen {
+  .platform-ios & {
+    &__content {
+      padding-top: 20px + $ios-header-offset;
+    }
+  }
+  &__content {
+    padding: 20px;
+    justify-content: space-between;
+  }
+  &__result {
+    text-align: center;
+  }
+  &__venn {
+    overflow: hidden;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  &__circle {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    float: left;
+    position: relative;
+    &--top {
+      z-index: 1;
+      margin: 0 0 -60px 60px;
+      background-color: $brand-red;
+      background-image: url("~@assets/images/logo-text-only.svg");
+      background-repeat: no-repeat;
+      background-position: center 50px;
+      background-size: 80px auto;
+    }
+    &--left {
+      clear: left;
+      z-index: 2;
+    }
+    &--right {
+      z-index: 3;
+      margin-left: -30px;
+    }
+  }
+}

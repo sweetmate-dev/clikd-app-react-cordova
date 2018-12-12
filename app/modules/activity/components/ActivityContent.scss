@@ -1,0 +1,11 @@
+@import "variables";
+
+.interactions-screen .content {
+  background-color: #212226;
+  .info-message {
+    top: 30%;
+    h2, p {
+      color: $brand-white;
+    }
+  }
+}

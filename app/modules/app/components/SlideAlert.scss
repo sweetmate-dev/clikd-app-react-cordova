@@ -1,0 +1,78 @@
+@import "variables";
+@import "functions";
+
+.slideAlert {
+  position: fixed;
+  left: 50%;
+  margin-left: -40%;
+  width: 80%;
+  bottom: 0;
+  background-color: rgba(255,255,255, 0.9);
+  padding: 20px 25px 55px 25px;
+  &__close {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      width: 16px;
+      height: 16px;
+      opacity: 1;
+    &:before, &:after {
+      position: absolute;
+      content: ' ';
+      right: 15px;
+      height: 24px;
+      width: 1px;
+      top: 1px;
+      background-color: $brand-dark-grey;
+    }
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+      top: 1px;
+    }
+  }
+  &__body {
+    color: $brand-light-grey;
+    font-size: $font-size-ms;
+    overflow-y: auto;
+    height: 320px;
+    @media screen and (max-width: $media-small) {
+      font-size: $font-size-xs;
+    }
+  }
+  &__title {
+    color: $brand-darkest-grey;
+    font-size: $font-size-xl;
+    margin-bottom: 15px;
+    padding-top: 20px;
+  }
+  &__body + &__buttons {
+    margin-top: 20px;
+  }
+  &__buttons {
+    &--transparentLast {
+      margin-bottom: -20px;
+    }
+  }
+  &.animate {
+    &-enter {
+      margin-top: 40px;
+      opacity: 0;
+    }
+    &-enter-active {
+      opacity: 1;
+      margin-top: 0;
+      transition: margin-top 0.3s $ease-out-cubic, opacity 0.1s linear;
+    }
+    &-leave-active {
+      opacity: 0;
+      margin-top: 20px;
+      transition: margin-top 0.2s $ease-out-cubic, opacity 0.2s linear;
+    }
+  }
+  span.Tappable-inactive {
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,15 @@
+@import "variables";
+
+.screen {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+  background-color: $brand-med-grey;
+  > *:not(.content) {
+    flex-shrink: 0;
+  }
+}

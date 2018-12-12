@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "58335905653",
+    "firebase_url": "https://clikd-app.firebaseio.com",
+    "project_id": "clikd-app",
+    "storage_bucket": "clikd-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:58335905653:android:89b0428fb4636709",
+        "android_client_info": {
+          "package_name": "com.clikdapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "58335905653-eft5ghousqcut8lqhrbc7c2c5omouvt7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaogaK6n99cpHr23NoghRPsPrttV7Uj3E"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 2
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

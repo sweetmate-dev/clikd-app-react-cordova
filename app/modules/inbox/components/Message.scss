@@ -1,0 +1,63 @@
+@import "variables";
+
+.message {
+  transition: opacity 0.2s linear;
+  &__bubble {
+    display: inline-flex;
+    align-items: flex-end;
+    padding: 8px 11px 8px 11px;
+    border-radius: 16px;
+    position: relative;
+    max-width: 250px;
+    &:before {
+      display: block;
+      width: 13px;
+      height: 8px;
+      content: '';
+      position: absolute;
+      bottom: 0;      
+      background-size: cover;
+    }
+  }
+  &__time {
+    font-size: 10px;
+    opacity: 0.6;
+    margin-left: 8px;
+  }
+  &__body {
+    white-space: pre-wrap;
+  }
+  &--dir-sent{
+    text-align: right;
+    .message__bubble {
+      text-align: left;
+      background-color: $brand-med-grey;
+      color: #fff;
+      &:before {
+        background-image: url("~@assets/images/chat/arrow-sent.png");
+        right: -2px;
+      }
+    }
+    &.message--status-error {
+      .message__bubble {
+        background-color: $brand-red;
+        &:before {
+          background-image: url("~@assets/images/chat/arrow-error.png");
+        }
+      }
+    }
+  }
+  &--dir-received {
+    .message__bubble {
+      background-color: #fff;
+      color: $brand-dark-grey;
+      &:before {
+        background-image: url("~@assets/images/chat/arrow-received.png");
+        left: -2px;
+      }
+    }
+  }
+  &--status-sending {
+    opacity: 0.5;
+  }
+} 

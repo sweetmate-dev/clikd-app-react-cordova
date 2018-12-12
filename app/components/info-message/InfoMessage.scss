@@ -1,0 +1,42 @@
+@import "variables";
+@import "functions";
+
+.info-message {
+  width: 85%;
+  text-align: center;  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  &__icon {
+    background-color: $brand-dark-grey;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    margin-bottom: 12px;
+    svg {
+      fill: #fff;
+      height: 50px;
+    }
+  }
+  h2, h3 {
+    margin-bottom: 10px;
+    color: $brand-lighter-grey;
+    font-size: $font-size-xxl;
+  }
+  p {
+    color: $brand-lighter-grey;
+    font-size: $font-size-xxl;
+  }
+  .button-list {
+    margin-top: 20px;
+  }
+  &--theme-med {
+    .message__icon {
+      background-color: $brand-med-grey;
+    }
+  }
+  &--theme-light {
+    color: grey(30%);
+  }
+}

@@ -1,0 +1,15 @@
+@import "variables";
+@import "functions";
+
+.tab-button {
+  flex-grow: 1;
+  width: 50%;
+  text-align: center;
+  padding: 10px 10px;
+  color: grey(80%);
+  transition: color 0.1s linear;
+  font-size: $font-size-l;
+  &--isActive {
+    color: #fff;
+  }
+}

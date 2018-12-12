@@ -1,0 +1,13 @@
+@import "functions";
+@import "variables";
+
+.checkbox-item {
+  &__button {
+    flex-shrink: 0;
+    margin: 0 10px;
+    svg {
+      height: 18px;
+      fill: grey(40%);
+    }
+  }
+}

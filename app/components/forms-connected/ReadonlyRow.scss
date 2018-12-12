@@ -1,0 +1,23 @@
+@import "variables";
+
+.readonly-row {
+  background: white;
+  color: $brand-dark-grey;
+  padding: 10px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  &__label {
+    width: 35%;
+    color: $brand-light-grey;
+    font-size: 98.5%;
+  }
+  &__value {
+    width: 65%;
+    text-align: right;
+  }
+  border-bottom: 1px solid $brand-lighter-grey;
+  &:last-child {
+    border-bottom: none;
+  }
+}
