@@ -4,35 +4,32 @@ import { Iterable } from 'immutable';
 const subscriptions = {};
 let store;
 
-function getValue(state, key, path){
-  if(!path){
+function getValue(state, key, path) {
+  if (!path) {
     return state[key];
-  } else {
-    return state[key].getIn(path);
   }
+  return state[key].getIn(path);
 }
 
-export function subscribe(key, path, cb){
+export function subscribe(key, path, cb) {
+  if (!store) throw new Error('Cannot subscribe before store has been initialized');
 
-  if(!store) throw new Error('Cannot subscribe before store has been initialized');
-
-  var id = uniqueId();
-  var currentState = store.getState();
-  if(!currentState.hasOwnProperty(key)){
+  const id = uniqueId();
+  const currentState = store.getState();
+  if (!currentState.hasOwnProperty(key)) {
     return console.error(`Key ${key} not found in store`);
   }
   subscriptions[id] = {
-    key: key,
-    path: path,
+    key,
+    path,
     value: getValue(currentState, key, path),
-    cb: cb
-  }
+    cb,
+  };
 
   return id;
-
 }
 
-export function unsubscribe(id){
+export function unsubscribe(id) {
   delete subscriptions[id];
 }
 
@@ -43,9 +40,8 @@ export function unsubscribe(id){
  */
 export default (storeInst) => {
   store = storeInst;
-  return next => action => {
-    
-    const result = next(action)
+  return next => (action) => {
+    const result = next(action);
     const state = store.getState();
 
     forIn(subscriptions, (subscription, id) => {
@@ -53,19 +49,19 @@ export default (storeInst) => {
       const oldValue = subscription.value;
       let changed = false;
       /* For immutable objects, use the built in equality checker */
-      if(Iterable.isIterable(currentValue) && !oldValue.equals(currentValue)){
+      if (Iterable.isIterable(currentValue) && !oldValue.equals(currentValue)) {
         changed = true;
       }
       /* Or for plain objects, just do a standard check */
-      else if(oldValue != currentValue){
+      else if (oldValue != currentValue) {
         changed = true;
       }
       subscription.value = currentValue;
-      if(changed){
+      if (changed) {
         subscription.cb(oldValue, currentValue, state);
       }
     });
 
-    return result
-  }
-}
+    return result;
+  };
+};
