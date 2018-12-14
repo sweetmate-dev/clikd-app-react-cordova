@@ -11,10 +11,8 @@ import RegistrationInterests from '../modules/registration/RegistrationInterests
 import InboxWrapper from '../modules/inbox/InboxWrapper';
 import ThreadWrapper from '../modules/inbox/ThreadWrapper';
 import ActivityWrapper from '../modules/activity/ActivityWrapper';
-import NudgesWrapper from '../modules/nudges/NudgesWrapper';
 import Interactions from '../modules/interactions/Interactions';
 import RecommendationsWrapper from '../modules/recommendations/RecommendationsWrapper';
-import SearchWrapper from '../modules/search/SearchWrapper';
 import RefineSearch from '../modules/search/RefineSearch';
 import Me from '../modules/me/Me';
 import ManageProfile from '../modules/manage-profile/ManageProfile';

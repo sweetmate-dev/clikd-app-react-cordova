@@ -19,7 +19,6 @@ export function getPurposes(purposes) {
   return matched.join(', ');
 }
 
-
 /**
  * Converts a dateString in format DD/MM/YYYT HH:MM:SS to a javascript date
  * object.
@@ -47,7 +46,7 @@ export function parseTemplate(template = '', data = {}) {
   return template.replace(/{([^{}]+)}/g, (match, key) => {
     const val = data[key];
     if (val === 0) return val;
-    else return val || '';
+    return val || '';
   });
 }
 
@@ -77,9 +76,9 @@ export function getClosestIndex(array, n) {
 
 /**
  * Get the number of whole days between two date objects
- * @param  {Date} fromDate 
- * @param  {Date}   toDate   
- * @return {Number}          
+ * @param  {Date} fromDate
+ * @param  {Date}   toDate
+ * @return {Number}
  */
 export function getDateDifference(fromDate, toDate = new Date()) {
   const diff = fromDate.getTime() - toDate.getTime();
@@ -119,4 +118,4 @@ export function flattenJSON(obj, name, stem) {
     out = merge([out, prop]);
   }
   return out;
-};
+}
