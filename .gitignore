@@ -8,3 +8,7 @@ npm-debug.log
 yarn.lock
 yarn-error.log
 config.xml
+
+google-service.json
+GoogleService-Info.plist
+./config/*
